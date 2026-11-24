@@ -1,1 +1,32 @@
-# mini-sales-tracker
+#include <iostream>
+using namespace std;
+
+int main() {
+    double sales;
+    double total = 0;
+    double average = 0;
+    int counter = 0;
+
+    cout << "Enter sales amount: ";
+    cin >> sales;
+
+    while (sales != 0) {
+        total += sales;
+        counter++;
+
+        cout << "Enter sales amount: ";
+        cin >> sales;
+    }
+
+    if (counter > 0) {
+        average = total / counter;
+    } else {
+        average = 0;
+    }
+
+    cout << "\ntotal customers: " << counter << "\n";
+    cout << "total sales; " << total << "\n";
+    cout << "Average sales: " << average << "\n";
+
+    return 0;
+}
